@@ -11,4 +11,13 @@ export const games = [
     tags: ["アクション", "シューティング", "2D"],
     releaseDate: "2024-10-17",
   },
+  {
+    id: 2,
+    title: "超弾幕シューティング",
+    description: "弾幕を避けながら敵を倒す、ハイスピードシューティングゲーム！",
+    thumbnail: "",
+    gamePath: "/games/hyper-shooting/index.html",
+    tags: ["シューティング", "弾幕", "2D"],
+    releaseDate: "2024-10-17",
+  },
 ];
