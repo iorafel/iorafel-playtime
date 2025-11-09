@@ -14,7 +14,7 @@ export const games = [
   {
     id: 2,
     title: "超弾幕シューティング",
-    description: "弾幕を避けながら敵を倒す、ハイスピードシューティングゲーム！",
+    description: "たくさんの弾幕を避けながら敵を倒し、ボスを次々と倒していくシューティングゲームです！",
     thumbnail: "",
     gamePath: "/games/hyper-shooting/index.html",
     tags: ["シューティング", "弾幕", "2D"],
