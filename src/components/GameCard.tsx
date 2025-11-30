@@ -1,16 +1,24 @@
+import type { SyntheticEvent } from 'react';
 import { Link } from 'react-router-dom';
+import type { Game } from '../types/game';
 import './GameCard.css';
 
-function GameCard({ game }) {
+interface GameCardProps {
+  game: Game;
+}
+
+function GameCard({ game }: GameCardProps) {
+  const handleImageError = (e: SyntheticEvent<HTMLImageElement>) => {
+    e.currentTarget.src = 'https://via.placeholder.com/300x200?text=No+Image';
+  };
+
   return (
     <Link to={`/game/${game.id}`} className="game-card">
       <div className="game-card-thumbnail">
         <img
           src={game.thumbnail}
           alt={game.title}
-          onError={(e) => {
-            e.target.src = 'https://via.placeholder.com/300x200?text=No+Image';
-          }}
+          onError={handleImageError}
         />
       </div>
       <div className="game-card-content">

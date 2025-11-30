@@ -3,8 +3,8 @@ import { games } from '../data/games';
 import './GameDetailPage.css';
 
 function GameDetailPage() {
-  const { id } = useParams();
-  const game = games.find((g) => g.id === parseInt(id));
+  const { id } = useParams<{ id: string }>();
+  const game = games.find((g) => g.id === parseInt(id ?? '0'));
 
   if (!game) {
     return (
@@ -35,7 +35,7 @@ function GameDetailPage() {
 
       <div className="game-player">
         <iframe
-          src={game.gamePath}
+          src={game.gameUrl}
           title={game.title}
           className="game-iframe"
           allowFullScreen
